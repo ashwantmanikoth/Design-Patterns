@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Demo {
     public static void show() {
+        Scheduler scheduler;
         while(true){
             System.out.println("1 - For Gregorian\n" +
                     "2 - For Arabian\n");
@@ -9,7 +10,11 @@ public class Demo {
             Scanner scanner = new Scanner(System.in);
             int type = scanner.nextInt();
 
-            var scheduler = new Scheduler(type);
+            if(type == 1){
+                 scheduler = new GregorianScheduler();
+            }else {
+                 scheduler =new ArabianScheduler();
+            }
             scheduler.schedule(new Event());
         }
     }
