@@ -1,5 +1,6 @@
+package L02_E01;
 
-public class Text implements Component{
+public class Text implements Component {
     private String content;
 
     public Text(String content) {
@@ -10,4 +11,13 @@ public class Text implements Component{
         return content;
     }
 
+    @Override
+    public Component clone() {
+        return new Text(this.getContent());
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
+    }
 }

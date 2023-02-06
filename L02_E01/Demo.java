@@ -1,3 +1,4 @@
+package L02_E01;
 
 public class Demo {
 
@@ -5,12 +6,17 @@ public class Demo {
         Timeline timeline = new Timeline();
         Text text = new Text("Hello");
         timeline.add(text);
+        Clip clip = new Clip();
+        timeline.add(clip);
+        Audio audio = new Audio();
 
         ContextMenu menu = new ContextMenu(timeline);
-        menu.duplicate(text);
 
-        System.out.println(timeline);
-        // TODO Add more objects to the timeline
+        menu.duplicate(text);
+        menu.duplicate(clip);
+        menu.duplicate(audio);
+
+        timeline.showAll();
 
     }
 }
