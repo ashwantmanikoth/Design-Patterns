@@ -36,7 +36,7 @@ public class Demo {
     static class runner implements Runnable{
         @Override
         public void run() {
-            System.out.println("New thread");
+            System.out.println("Thread value"+Thread.currentThread());
             bankLogger = BankLogger.createInstance("filename");
         }
     }
