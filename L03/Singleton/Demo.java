@@ -29,7 +29,7 @@ public class Demo {
                 logger2.write("test logger 2");
             }
 
-            System.out.println("Different file name different logger"+(logger1.equals(logger2)?"Same Loggers":"Different Loggers"));
+            System.out.println("Different file name"+(logger1.equals(logger2)?"Same Loggers":"Different Loggers"));
 
             //multiple files
             Logger logger3  = new Logger(fileName1);
