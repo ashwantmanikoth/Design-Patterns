@@ -27,5 +27,8 @@ public class Customer {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+    public Customer(){
+
+    }
 
 }
