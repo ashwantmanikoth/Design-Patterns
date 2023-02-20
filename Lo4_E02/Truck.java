@@ -7,7 +7,7 @@ public class Truck extends Vehicle{
 
     @Override public void manufacture()
     {
-        System.out.print("Car ");
+        System.out.print("Truck ");
         w1.work();
         w2.work();
     }
