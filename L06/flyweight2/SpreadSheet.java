@@ -46,7 +46,7 @@ public class SpreadSheet {
   private CellContext getDefaultContext() {
     // In a real app, these values should not be hardcoded here.
     // They should be read from a configuration file.
-    return new CellContext("Times New Roman", 12, false);
+    return contextFactory.getContext("Times New Roman", 12, false);
   }
 
   public void render() {
