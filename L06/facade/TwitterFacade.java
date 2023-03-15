@@ -1,7 +1,5 @@
 package L06.facade;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TwitterFacade {
@@ -20,7 +18,11 @@ public class TwitterFacade {
         return twitterClient.getRecentTweets(accessToken);
     }
 
-    public List getAllPosts() {
-        return twitterClient.getAllPosts(accessToken);
+    public Boolean likeATweet(String tweetId) {
+        return twitterClient.likeTweet(accessToken,tweetId);
+    }
+
+    public void composeTweet(String message) {
+        twitterClient.composeTweet(accessToken,message);
     }
 }

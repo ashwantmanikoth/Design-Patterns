@@ -6,6 +6,12 @@ public class Demo {
   public static void show() {
     TwitterFacade twitterFacade = new TwitterFacade("appKey", "secret");
     List tweets =  twitterFacade.getRecentTweets();
-    List posts = twitterFacade.getAllPosts();
+    //liking tweet
+    Boolean likeStatus = twitterFacade.likeATweet((String) tweets.get(1));
+    if(likeStatus){
+      System.out.println("Tweet Liked!");
+    }
+    //composing
+    twitterFacade.composeTweet("Message");
   }
 }

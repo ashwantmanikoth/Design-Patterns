@@ -10,8 +10,12 @@ public class TwitterClient {
     return new ArrayList<>();
   }
 
-  public List getAllPosts(String accessToken) {
-    System.out.println("All twitter posts");
-    return new ArrayList<>();
+  public Boolean likeTweet(String accessToken, String tweetID) {
+    System.out.print("Tweet with "+tweetID);
+    return true;
+  }
+
+  public void composeTweet(String accessToken, String message) {
+    System.out.println(message+"tweeted");
   }
 }
