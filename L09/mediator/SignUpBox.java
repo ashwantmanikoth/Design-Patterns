@@ -21,11 +21,13 @@ public class SignUpBox implements Mediator {
 
 
   private void sendNotification() {
-    boolean signUpControlState = !userInput.getContent().isEmpty() &&
-        !passwordInput.getContent().isEmpty() &&
-        termsCheck.isChecked();
-    for (L09.mediator.Observer observer : observers) {
-      observer.update(signUpControlState);
+    boolean state = false;
+    if(!userInput.getContent().isEmpty() && !passwordInput.getContent().isEmpty() && termsCheck.isChecked()){
+
+      state = true;
+    }
+    for (Observer observer : observers) {
+      observer.update(state);
     }
   }
 

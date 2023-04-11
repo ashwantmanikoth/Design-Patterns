@@ -13,5 +13,6 @@ public class CheckBox extends UIControl {
 
     public void setChecked(boolean checked) {
         isChecked = checked;
+        mediator.changeNow(this);
     }
 }
